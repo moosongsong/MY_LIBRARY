@@ -1,8 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="MY_LIBRARY" targetName="MY_LIBRARY" />
+    </generated>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.c" beforeDir="false" afterPath="$PROJECT_DIR$/library_CircleList.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.h" beforeDir="false" afterPath="$PROJECT_DIR$/library_CircleList.h" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ckr65GhNJvo9ivrMddz8eLltlQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="MY_LIBRARY" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MY_LIBRARY" TARGET_NAME="MY_LIBRARY" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="" />
+      <created>1591083253974</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591083253974</updated>
+      <workItem from="1591083255443" duration="125000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="511" y="278" key="Github.ShareDialog" timestamp="1591083301570">
+      <screen x="0" y="40" width="1280" height="680" />
+    </state>
+    <state x="511" y="278" key="Github.ShareDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083301570" />
+    <state x="412" y="78" key="Github.UntrackedFilesDialog" timestamp="1591083312189">
+      <screen x="0" y="40" width="1280" height="680" />
+    </state>
+    <state x="412" y="78" key="Github.UntrackedFilesDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083312189" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591083266964">
+      <screen x="0" y="40" width="1280" height="680" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.40.1280.680@0.40.1280.680" timestamp="1591083266964" />
   </component>
 </project>
