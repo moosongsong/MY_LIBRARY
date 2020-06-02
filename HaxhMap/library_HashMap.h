@@ -13,7 +13,7 @@ typedef struct Node Node;
 
 HashMap * initailizeHashMap(FreeFunction freeFunction, DisplayFunction displayFunction,
                             CompareFunction compareFunction, size_t bucketSize);
-
+errno_t finalizeHashMap(HashMap * hashMap);
 
 
 #endif //MY_LIBRARY_LIBRARY_HASHMAP_H

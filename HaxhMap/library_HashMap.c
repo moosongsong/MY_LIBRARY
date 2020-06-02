@@ -4,7 +4,7 @@
 
 typedef struct Node{
     const char * key;
-    const char * value;
+    void * value;
     struct Node * next;
 }Node;
 
@@ -57,5 +57,13 @@ errno_t finalizeHashMap(HashMap * hashMap){
         return -1;
     }
 
+    for (int i = 0; i < hashMap->bucketSize; ++i) {
+        for (Node * node = hashMap->buckets[i]; node !=NULL ; node=node->next) {
+            hashMap->freeFunction(node->value);
+        }
+        free(hashMap->buckets[i]);
+    }
 
+    free(hashMap->buckets);
+    free(hashMap);
 }
