@@ -1,0 +1,8 @@
+//
+// Created by songe on 2020-06-02.
+//
+
+#ifndef MY_LIBRARY_LIBRARY_HASHMAP_H
+#define MY_LIBRARY_LIBRARY_HASHMAP_H
+
+#endif //MY_LIBRARY_LIBRARY_HASHMAP_H
