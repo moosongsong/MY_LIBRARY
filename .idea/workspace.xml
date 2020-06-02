@@ -11,12 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="uploaded">
+    <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="modify">
+      <change afterPath="$PROJECT_DIR$/Array/library_Array.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Array/library_Array.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_CircleList.c" beforeDir="false" afterPath="$PROJECT_DIR$/CircleList/library_CircleList.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_CircleList.h" beforeDir="false" afterPath="$PROJECT_DIR$/CircleList/library_CircleList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_HashMap.c" beforeDir="false" afterPath="$PROJECT_DIR$/HaxhMap/library_HashMap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_HashMap.h" beforeDir="false" afterPath="$PROJECT_DIR$/HaxhMap/library_HashMap.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -67,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591083253974</updated>
-      <workItem from="1591083255443" duration="1327000" />
+      <workItem from="1591083255443" duration="2100000" />
     </task>
     <task id="LOCAL-00001" summary="second git upload">
       <created>1591083432601</created>
@@ -90,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591084122695</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="modify">
+      <created>1591084614323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591084614323</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +111,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second git upload" />
     <MESSAGE value="uploaded" />
-    <option name="LAST_COMMIT_MESSAGE" value="uploaded" />
+    <MESSAGE value="modify" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify" />
   </component>
   <component name="WindowStateProjectService">
     <state x="511" y="278" key="Github.ShareDialog" timestamp="1591083301570">
@@ -110,10 +123,10 @@
       <screen x="0" y="40" width="1280" height="680" />
     </state>
     <state x="412" y="78" key="Github.UntrackedFilesDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083312189" />
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591084130987">
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591084670604">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591084130987" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591084670604" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591083266964">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
