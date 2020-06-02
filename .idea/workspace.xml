@@ -11,12 +11,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="second git upload">
-      <change afterPath="$PROJECT_DIR$/library_HashMap.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_HashMap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="uploaded">
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_CircleList.c" beforeDir="false" afterPath="$PROJECT_DIR$/CircleList/library_CircleList.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_CircleList.h" beforeDir="false" afterPath="$PROJECT_DIR$/CircleList/library_CircleList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_HashMap.c" beforeDir="false" afterPath="$PROJECT_DIR$/HaxhMap/library_HashMap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_HashMap.h" beforeDir="false" afterPath="$PROJECT_DIR$/HaxhMap/library_HashMap.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +44,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\songe\DataStructure_in_CLion\MY_LIBRARY\HaxhMap" />
+      <recent name="C:\Users\songe\DataStructure_in_CLion\MY_LIBRARY\CircleList" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MY_LIBRARY" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MY_LIBRARY" TARGET_NAME="MY_LIBRARY" CONFIG_NAME="Debug">
       <method v="2">
@@ -61,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591083253974</updated>
-      <workItem from="1591083255443" duration="833000" />
+      <workItem from="1591083255443" duration="1327000" />
     </task>
     <task id="LOCAL-00001" summary="second git upload">
       <created>1591083432601</created>
@@ -77,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591083479149</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="uploaded">
+      <created>1591084122687</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591084122695</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,7 +98,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second git upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="second git upload" />
+    <MESSAGE value="uploaded" />
+    <option name="LAST_COMMIT_MESSAGE" value="uploaded" />
   </component>
   <component name="WindowStateProjectService">
     <state x="511" y="278" key="Github.ShareDialog" timestamp="1591083301570">
@@ -96,10 +110,10 @@
       <screen x="0" y="40" width="1280" height="680" />
     </state>
     <state x="412" y="78" key="Github.UntrackedFilesDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083312189" />
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591083484727">
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591084130987">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591083484727" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591084130987" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591083266964">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
