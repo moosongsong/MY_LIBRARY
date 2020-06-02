@@ -11,10 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.c" beforeDir="false" afterPath="$PROJECT_DIR$/library_CircleList.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.h" beforeDir="false" afterPath="$PROJECT_DIR$/library_CircleList.h" afterDir="false" />
+    <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="second git upload">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
   </component>
@@ -57,12 +57,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591083253974</updated>
-      <workItem from="1591083255443" duration="125000" />
+      <workItem from="1591083255443" duration="210000" />
     </task>
+    <task id="LOCAL-00001" summary="second git upload">
+      <created>1591083432601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591083432601</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="second git upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="second git upload" />
   </component>
   <component name="WindowStateProjectService">
     <state x="511" y="278" key="Github.ShareDialog" timestamp="1591083301570">
@@ -73,6 +85,10 @@
       <screen x="0" y="40" width="1280" height="680" />
     </state>
     <state x="412" y="78" key="Github.UntrackedFilesDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083312189" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591083438800">
+      <screen x="0" y="40" width="1280" height="680" />
+    </state>
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591083438800" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591083266964">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
