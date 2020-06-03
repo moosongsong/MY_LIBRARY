@@ -33,6 +33,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaxhMap/library_HashMap.c" beforeDir="false" afterPath="$PROJECT_DIR$/HaxhMap/library_HashMap.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HaxhMap/library_HashMap.h" beforeDir="false" afterPath="$PROJECT_DIR$/HaxhMap/library_HashMap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.c" beforeDir="false" afterPath="$PROJECT_DIR$/user.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +95,8 @@
       <workItem from="1591102364834" duration="727000" />
       <workItem from="1591103676357" duration="1422000" />
       <workItem from="1591150048321" duration="1370000" />
-      <workItem from="1591151951758" duration="1851000" />
+      <workItem from="1591151951758" duration="3157000" />
+      <workItem from="1591172347892" duration="2984000" />
     </task>
     <task id="LOCAL-00001" summary="second git upload">
       <created>1591083432601</created>
@@ -159,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591152767120</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update hash map">
+      <created>1591153825312</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1591153825312</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,10 +203,10 @@
       <screen x="0" y="40" width="1280" height="680" />
     </state>
     <state x="412" y="78" key="Github.UntrackedFilesDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083312189" />
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591152772603">
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591153831751">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591152772603" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591153831751" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591083266964">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
