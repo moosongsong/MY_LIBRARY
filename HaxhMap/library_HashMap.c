@@ -117,7 +117,15 @@ errno_t insertIntoHashMap(HashMap *hashMap, char *key, void *value) {
 }
 
 void hashMapDisplay(HashMap * hashMap){
-
+    if(hashMap == NULL){
+        return;
+    }
+    for (int i = 0; i < hashMap->bucketSize; ++i) {
+        printf("bucket[%2lu]", i);
+        for (Node* cur = hashMap->buckets[i]; cur != NULL; cur = cur->next)
+            printf("->[%s]", hashMap->displayFunction(cur));
+        printf("\n");
+    }
 }
 
 Node * hashMapGet(HashMap * hashMap, char * key){
@@ -135,3 +143,4 @@ Node * hashMapGet(HashMap * hashMap, char * key){
     }
     return NULL;
 }
+

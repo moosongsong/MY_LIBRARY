@@ -23,4 +23,6 @@ HashMap *initailizeHashMap(FreeFunction freeFunction, DisplayFunction displayFun
 errno_t finalizeHashMap(HashMap *hashMap);
 
 Node * hashMapGet(HashMap * hashMap, char * key);
+
+void hashMapDisplay(HashMap * hashMap);
 #endif //MY_LIBRARY_LIBRARY_HASHMAP_H
