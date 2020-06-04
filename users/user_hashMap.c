@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "HashMap/library_HashMap.h"
+#include "../HashMap/library_HashMap.h"
 #include <stdlib.h>
 #include <string.h>
 
-//key:이름, value:person
+//key:person->name, value:person
 typedef struct Person{
     char name [32];
     int age;
@@ -57,11 +57,10 @@ int main() {
     Person people[4] = {
             {"daniel", 20}, {"susan", 30}, {"petty", 40}, {"eddy", 50}
     };
-    HashMap* map = initializeHashMap(toStringForPerson, equalsForVoid, hashCodeForString, 1);
+    HashMap* map = initializeHashMap(toStringForPerson, equalsForVoid, hashCodeForString, 10);
     for (int i = 0; i < 4; i++)
         insertIntoHashMap(map, people[i].name, &people[i]);
 
-    // 아래의 hashmapGet 함수를 구현해 보세요 :D
     for (int i = 0; i < 4; i++) {
         Person* p = hashMapGet(map, people[i].name);
         if (p)

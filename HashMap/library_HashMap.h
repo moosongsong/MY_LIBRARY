@@ -17,9 +17,6 @@ typedef void(*ExtraFunction)(void *key, void *value);
 
 static errno_t hashKey(HashMap *hashMap, void *key);
 
-//HashMap *initializeHashMap(FreeFunction freeFunctionForKey, FreeFunction freeFunctionForValue, DisplayFunction displayFunction,
-//                           CompareFunction compareFunction, HashCode hashCode, size_t bucketSize);
-
 HashMap *initializeHashMap(DisplayFunction displayFunction, CompareFunction compareFunction, HashCode hashCode,
                            size_t bucketSize);
 
