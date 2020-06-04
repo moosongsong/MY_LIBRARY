@@ -2,22 +2,6 @@
 #include <stdlib.h>
 #include "library_HashMap.h"
 
-typedef struct Node {
-    void *key;
-    void *value;
-    int hash;
-    struct Node *next;
-} Node;
-
-typedef struct HashMap {
-    Node **buckets;
-    size_t bucketSize;
-    size_t count;
-    DisplayFunction displayFunction;
-    CompareFunction compareFunction;
-    HashCode hashCode;
-} HashMap;
-
 /*initialize hash map, return is hashMap*/
 HashMap *initializeHashMap(DisplayFunction displayFunction,
                            CompareFunction compareFunction, HashCode hashCode, size_t bucketSize) {
@@ -111,8 +95,24 @@ static errno_t equalsKey(void * key1, int hash1, void * key2, int hash2, Compare
     if(hash1 != hash2){
         return -1;
     }
-
     return compareFunction(key1, key2);
+}
+
+static errno_t rehashing(HashMap * hashMap){
+    if(hashMap == NULL){
+        return -1;
+    }
+
+    HashMap * newMap = initializeHashMap(hashMap->displayFunction, hashMap->compareFunction, hashMap->hashCode, (hashMap->bucketSize)*2);
+
+    for (int i = 0; i < hashMap->bucketSize; ++i) {
+        for (Node* cur = hashMap->buckets[i]; cur != NULL; cur = cur->next){
+            insertIntoHashMap(newMap, cur->key, cur->value);
+        }
+    }
+    free(hashMap->buckets);
+    free(hashMap);
+    hashMap=newMap;
 }
 
 /*insert Node into hashMap*/
@@ -121,6 +121,11 @@ errno_t insertIntoHashMap(HashMap *hashMap, void *key, void *value) {
         perror("argument is null");
         return -1;
     }
+
+    if(hashMap->count >= hashMap->bucketSize*3/4){
+        rehashing(hashMap);
+    }
+
     int hash = hashKey(hashMap, key);
     int index = calculateIndex(hashMap->bucketSize, hash);
 

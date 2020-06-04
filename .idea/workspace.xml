@@ -30,11 +30,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="total update hash maps">
+      <change afterPath="$PROJECT_DIR$/BinaryTree/library_Tree.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryTree/library_Tree.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HashMap_Rehashing/library_HashMap.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HashMap_Rehashing/library_HashMap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_tree.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaxhMap/library_HashMap.c" beforeDir="false" afterPath="$PROJECT_DIR$/HashMap/library_HashMap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaxhMap/library_HashMap.h" beforeDir="false" afterPath="$PROJECT_DIR$/HashMap/library_HashMap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.c" beforeDir="false" afterPath="$PROJECT_DIR$/user.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HashMap/library_HashMap.c" beforeDir="false" afterPath="$PROJECT_DIR$/HashMap/library_HashMap.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +60,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -101,7 +105,7 @@
       <workItem from="1591181689695" duration="2463000" />
       <workItem from="1591230517213" duration="422000" />
       <workItem from="1591231049832" duration="11907000" />
-      <workItem from="1591249004672" duration="1419000" />
+      <workItem from="1591249004672" duration="6767000" />
     </task>
     <task id="LOCAL-00001" summary="second git upload">
       <created>1591083432601</created>
@@ -201,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591248112321</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="total update hash maps">
+      <created>1591251400911</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1591251400911</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +231,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="second git upload" />
     <MESSAGE value="uploaded" />
     <MESSAGE value="modify" />
@@ -241,26 +253,26 @@
       <screen x="0" y="40" width="1280" height="680" />
     </state>
     <state x="412" y="78" key="Github.UntrackedFilesDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083312189" />
-    <state width="1237" height="76" key="GridCell.Tab.0.bottom" timestamp="1591249127898">
+    <state width="1237" height="134" key="GridCell.Tab.0.bottom" timestamp="1591251601228">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state width="1237" height="76" key="GridCell.Tab.0.bottom/0.40.1280.680@0.40.1280.680" timestamp="1591249127898" />
-    <state width="1237" height="76" key="GridCell.Tab.0.center" timestamp="1591249127898">
+    <state width="1237" height="134" key="GridCell.Tab.0.bottom/0.40.1280.680@0.40.1280.680" timestamp="1591251601228" />
+    <state width="1237" height="134" key="GridCell.Tab.0.center" timestamp="1591251601228">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state width="1237" height="76" key="GridCell.Tab.0.center/0.40.1280.680@0.40.1280.680" timestamp="1591249127898" />
-    <state width="1237" height="76" key="GridCell.Tab.0.left" timestamp="1591249127898">
+    <state width="1237" height="134" key="GridCell.Tab.0.center/0.40.1280.680@0.40.1280.680" timestamp="1591251601228" />
+    <state width="1237" height="134" key="GridCell.Tab.0.left" timestamp="1591251601228">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state width="1237" height="76" key="GridCell.Tab.0.left/0.40.1280.680@0.40.1280.680" timestamp="1591249127898" />
-    <state width="1237" height="76" key="GridCell.Tab.0.right" timestamp="1591249127898">
+    <state width="1237" height="134" key="GridCell.Tab.0.left/0.40.1280.680@0.40.1280.680" timestamp="1591251601228" />
+    <state width="1237" height="134" key="GridCell.Tab.0.right" timestamp="1591251601228">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state width="1237" height="76" key="GridCell.Tab.0.right/0.40.1280.680@0.40.1280.680" timestamp="1591249127898" />
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591248179211">
+    <state width="1237" height="134" key="GridCell.Tab.0.right/0.40.1280.680@0.40.1280.680" timestamp="1591251601228" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591251406355">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591248179211" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591251406355" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591235416000">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
