@@ -74,7 +74,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="MY_LIBRARY" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MY_LIBRARY" TARGET_NAME="MY_LIBRARY" CONFIG_NAME="Debug">
+    <configuration name="MY_LIBRARY" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MY_LIBRARY" TARGET_NAME="MY_LIBRARY" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MY_LIBRARY" RUN_TARGET_NAME="MY_LIBRARY">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -96,7 +96,10 @@
       <workItem from="1591103676357" duration="1422000" />
       <workItem from="1591150048321" duration="1370000" />
       <workItem from="1591151951758" duration="3157000" />
-      <workItem from="1591172347892" duration="2984000" />
+      <workItem from="1591172347892" duration="3012000" />
+      <workItem from="1591181689695" duration="2463000" />
+      <workItem from="1591230517213" duration="422000" />
+      <workItem from="1591231049832" duration="3084000" />
     </task>
     <task id="LOCAL-00001" summary="second git upload">
       <created>1591083432601</created>
@@ -168,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591153825312</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update hash map">
+      <created>1591177207747</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1591177207747</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +205,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="update hash map" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="347" y="89" key="#MY_LIBRARY" timestamp="1591231152278">
+      <screen x="0" y="40" width="1280" height="680" />
+    </state>
+    <state x="347" y="89" key="#MY_LIBRARY/0.40.1280.680@0.40.1280.680" timestamp="1591231152278" />
     <state x="511" y="278" key="Github.ShareDialog" timestamp="1591083301570">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
@@ -203,10 +217,10 @@
       <screen x="0" y="40" width="1280" height="680" />
     </state>
     <state x="412" y="78" key="Github.UntrackedFilesDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083312189" />
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591153831751">
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591177212614">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591153831751" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591177212614" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591083266964">
       <screen x="0" y="40" width="1280" height="680" />
     </state>

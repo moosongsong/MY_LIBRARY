@@ -6,6 +6,7 @@
 typedef struct Node {
     void *key;
     void *value;
+    int hash;
     struct Node *next;
 } Node;
 
@@ -13,15 +14,16 @@ typedef struct HashMap {
     Node **buckets;
     size_t bucketSize;
     size_t count;
-    FreeFunction freeFunction;
+    FreeFunction freeFunctionForKey;
+    FreeFunction freeFunctionForValue;
     DisplayFunction displayFunction;
     CompareFunction compareFunction;
     HashCode hashCode;
 } HashMap;
 
-HashMap *initailizeHashMap(FreeFunction freeFunction, DisplayFunction displayFunction,
+HashMap *initailizeHashMap(FreeFunction freeFunctionForKey, FreeFunction freeFunctionForValue, DisplayFunction displayFunction,
                            CompareFunction compareFunction, HashCode hashCode, size_t bucketSize) {
-    if (freeFunction == NULL || displayFunction == NULL || compareFunction == NULL) {
+    if (freeFunctionForKey == NULL || displayFunction == NULL || compareFunction == NULL || freeFunctionForValue == NULL) {
         fprintf(stderr, "function is empty");
         return NULL;
     }
@@ -48,9 +50,9 @@ HashMap *initailizeHashMap(FreeFunction freeFunction, DisplayFunction displayFun
     hashMap->bucketSize = bucketSize;
     hashMap->compareFunction = compareFunction;
     hashMap->displayFunction = displayFunction;
-    hashMap->freeFunction = freeFunction;
+    hashMap->freeFunctionForKey = freeFunctionForKey;
+    hashMap->freeFunctionForValue = freeFunctionForValue;
     hashMap->hashCode = hashCode;
-//    hashMap->count=0;
     return hashMap;
 }
 
@@ -62,8 +64,8 @@ errno_t finalizeHashMap(HashMap *hashMap) {
 
     for (int i = 0; i < hashMap->bucketSize; ++i) {
         for (Node *node = hashMap->buckets[i]; node != NULL;) {
-            free(node->key);
-            hashMap->freeFunction(node->value);
+            hashMap->freeFunctionForKey(node->key);
+            hashMap->freeFunctionForValue(node->value);
 
             Node *temp = node;
             node = node->next;
@@ -76,7 +78,7 @@ errno_t finalizeHashMap(HashMap *hashMap) {
     free(hashMap);
 }
 
-static Node * makeNode(void * key, void * value){
+static Node * makeNode(HashMap * hashMap, void * key, void * value){
     if (key == NULL || value == NULL) {
         fprintf(stderr, "makeNode: argument is null\n");
         return NULL;
@@ -90,7 +92,7 @@ static Node * makeNode(void * key, void * value){
 
     node->key=key;
     node->value=value;
-
+    node->hash=hashMap->hashCode(key, hashMap);
     return node;
 }
 
@@ -100,34 +102,28 @@ errno_t insertIntoHashMap(HashMap *hashMap, void *key, void *value) {
         return -1;
     }
 
-    int index = hashMap->hashCode(key, hashMap);
+    int index = hashMap->hashCode(key, hashMap->bucketSize);
     Node** ptr = &(hashMap->buckets[index]);
 
     while (20130613) {
         Node* cur = *ptr;
         if(cur == NULL){
-            Node * node = makeNode(key, value);
+            Node * node = makeNode(hashMap, key, value);
             if (node == NULL) {
                 fprintf(stderr, "insertIntoHashMap: makeNode error\n");
                 return -1;
             }
             *ptr = node;
-            map->count++;
+            hashMap->count++;
             return 0;
         }
-
-        if (temp == NULL) {
-            perror("allocation is failed");
-            return -1;
+        if(hashMap->compareFunction(cur->key, key) == 0){
+            hashMap->freeFunctionForKey(cur->key);
+            hashMap->freeFunctionForValue(cur->value);
+            cur->key=key;
+            return 0;
         }
-        temp->key = key;
-        temp->value = value;
-        hashMap->buckets[index] = temp;
-        hashMap->count++;
-        return 0;
-    }
-
-    while (node) {
+        ptr = &(cur->next);
 
     }
 }
@@ -146,17 +142,34 @@ void hashMapDisplay(HashMap * hashMap){
 
 Node * hashMapGet(HashMap * hashMap, char * key){
     if(hashMap == NULL || key ==NULL){
-        fprintf(stderr, "atgument is null");
+        fprintf(stderr, "argument is null");
         return NULL;
     }
 
-    int index = hashMap->hashCode(key);
-    Node * temp = hashMap->buckets[index];
-    for (Node * node = temp; node != NULL ; node = node->next) {
-        if(strcmp(key, node->key)==0){
+    int index = hashMap->hashCode(key, hashMap);
+    for (Node * node = hashMap->buckets[index]; node != NULL ; node = node->next) {
+        if(hashMap->compareFunction(node->key, key) ==0){
             return node;
         }
     }
     return NULL;
 }
 
+int hashMapRemove(HashMap * hashMap, void * key){
+    if (hashMap == NULL || key == NULL) {
+        fprintf(stderr, "hashMapRemove: argument is null\n");
+        return -1;
+    }
+
+    int index = hashMap->hashCode(key, hashMap->bucketSize);
+    for (Node * node = hashMap->buckets[index]; node != NULL ; node = node->next) {
+        if(hashMap->compareFunction(node->key, key) ==0){
+            node->next=
+            hashMap->freeFunctionForKey(node->key);
+            hashMap->freeFunctionForValue(node->value);
+            free(node);
+            return 0;
+        }
+    }
+    return -1;
+}
