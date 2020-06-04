@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "HaxhMap/library_HashMap.h"
+#include "HashMap/library_HashMap.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -9,6 +9,8 @@ typedef struct Person{
     int age;
 }Person;
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "hicpp-signed-bitwise"
 int hashCodeForString(void *data) {
 
     char * str = data;
@@ -16,7 +18,6 @@ int hashCodeForString(void *data) {
         return -1;
     }
     int hash = 401;
-    int c;
 
     while (*str != '\0') {
         hash = ((hash << 4) + (int) (*str));
@@ -24,6 +25,7 @@ int hashCodeForString(void *data) {
     }
     return hash;
 }
+#pragma clang diagnostic pop
 
 int equalsForVoid(void * key1, void * key2){
     if(key1 == NULL || key2 == NULL){
@@ -42,21 +44,34 @@ char * toStringForPerson(void * data){
     return buf;
 }
 
+void increaseAge(void * key, void* value){
+    if(key == NULL || value == NULL){
+        return;
+    }
+
+    Person * person = value;
+    ++person->age;
+}
+
 int main() {
     Person people[4] = {
             {"daniel", 20}, {"susan", 30}, {"petty", 40}, {"eddy", 50}
     };
-    HashMap* map = initializeHashMap(toStringForPerson, equalsForVoid, hashCodeForString, 10);
+    HashMap* map = initializeHashMap(toStringForPerson, equalsForVoid, hashCodeForString, 1);
     for (int i = 0; i < 4; i++)
         insertIntoHashMap(map, people[i].name, &people[i]);
 
     // 아래의 hashmapGet 함수를 구현해 보세요 :D
-//    for (int i = 0; i < 4; i++) {
-//        Person* p = hashMapGet(map, people[i].name);
-//        if (p)
-//            printf("key: %s, value: %d\n", people[i].name, p->age);
-//    }
-//    hashMapDisplay(map);
+    for (int i = 0; i < 4; i++) {
+        Person* p = hashMapGet(map, people[i].name);
+        if (p)
+            printf("key: %s, value: %d\n", people[i].name, p->age);
+    }
+    hashMapDisplay(map);
+
+    hashMapForEach(map, increaseAge);
+    hashMapDisplay(map);
+
     for (int i = 0; i < 4; i++) {
         hashMapRemove(map, people[i].name);
         hashMapDisplay(map);

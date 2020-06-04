@@ -13,6 +13,8 @@ typedef int(*CompareFunction)(void *, void *);
 
 typedef int(*HashCode)(void *key);
 
+typedef void(*ExtraFunction)(void *key, void *value);
+
 static errno_t hashKey(HashMap *hashMap, void *key);
 
 //HashMap *initializeHashMap(FreeFunction freeFunctionForKey, FreeFunction freeFunctionForValue, DisplayFunction displayFunction,
@@ -32,5 +34,7 @@ errno_t insertIntoHashMap(HashMap *hashMap, void *key, void *value);
 void hashMapDisplay(HashMap *hashMap);
 
 void* hashMapRemove(HashMap * hashMap, void * key);
+
+int hashMapForEach(HashMap * hashMap, ExtraFunction extraFunction);
 
 #endif //MY_LIBRARY_LIBRARY_HASHMAP_H

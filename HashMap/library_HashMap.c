@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "library_HashMap.h"
 
 typedef struct Node {
@@ -14,8 +13,6 @@ typedef struct HashMap {
     Node **buckets;
     size_t bucketSize;
     size_t count;
-//    FreeFunction freeFunctionForKey;
-//    FreeFunction freeFunctionForValue;
     DisplayFunction displayFunction;
     CompareFunction compareFunction;
     HashCode hashCode;
@@ -24,10 +21,6 @@ typedef struct HashMap {
 /*initialize hash map, return is hashMap*/
 HashMap *initializeHashMap(DisplayFunction displayFunction,
                            CompareFunction compareFunction, HashCode hashCode, size_t bucketSize) {
-//    if (freeFunctionForKey == NULL || displayFunction == NULL || compareFunction == NULL || freeFunctionForValue == NULL) {
-//        fprintf(stderr, "function is empty");
-//        return NULL;
-//    }
     if (displayFunction == NULL || compareFunction == NULL) {
         fprintf(stderr, "function is empty");
         return NULL;
@@ -55,32 +48,18 @@ HashMap *initializeHashMap(DisplayFunction displayFunction,
     hashMap->bucketSize = bucketSize;
     hashMap->compareFunction = compareFunction;
     hashMap->displayFunction = displayFunction;
-//    hashMap->freeFunctionForKey = freeFunctionForKey;
-//    hashMap->freeFunctionForValue = freeFunctionForValue;
     hashMap->hashCode = hashCode;
     return hashMap;
 }
 
-/*to destory hash map*/
+/*to destroy hash map*/
 errno_t finalizeHashMap(HashMap *hashMap) {
     if (hashMap == NULL) {
         return -1;
     }
-
-//    for (int i = 0; i < hashMap->bucketSize; ++i) {
-//        for (Node *node = hashMap->buckets[i]; node != NULL;) {
-//            hashMap->freeFunctionForKey(node->key);
-//            hashMap->freeFunctionForValue(node->value);
-
-//            Node *temp = node;
-//            node = node->next;
-//
-            free(hashMap->buckets);
-//        }
-//    }
-
-//    free(hashMap->buckets);
+    free(hashMap->buckets);
     free(hashMap);
+    return 0;
 }
 
 /*make Node which is used for insert into Hash map function*/
@@ -149,7 +128,6 @@ errno_t insertIntoHashMap(HashMap *hashMap, void *key, void *value) {
 
     while (20130613) {
         Node* cur = *ptr;
-        int hash = hashKey(hashMap, key);
         if(cur == NULL){/*If there is no data for the key*/
             Node * node = makeNode(key, value, hash);
             if (node == NULL) {
@@ -163,22 +141,20 @@ errno_t insertIntoHashMap(HashMap *hashMap, void *key, void *value) {
         }
 
         if(equalsKey(cur->key, cur->hash, key, hash, hashMap->compareFunction) == 0){/*If there is data for the key*/
-//            hashMap->freeFunctionForKey(cur->key);
-//            hashMap->freeFunctionForValue(cur->value);
             cur->value=value;
             return 0;
         }
         ptr = &(cur->next);
     }
-    return 0;
 }
 
 void hashMapDisplay(HashMap * hashMap){
     if(hashMap == NULL){
         return;
     }
+    printf("======================================================\n");
     for (int i = 0; i < hashMap->bucketSize; ++i) {
-        printf("bucket[%2lu]", i);
+        printf("bucket[%2d]", i);
         for (Node* cur = hashMap->buckets[i]; cur != NULL; cur = cur->next)
             printf("->[%s]", hashMap->displayFunction(cur->value));
         printf("\n");
@@ -205,7 +181,7 @@ void * hashMapGet(HashMap * hashMap, void * key){
 void* hashMapRemove(HashMap * hashMap, void * key){
     if (hashMap == NULL || key == NULL) {
         fprintf(stderr, "hashMapRemove: argument is null\n");
-        return -1;
+        return NULL;
     }
 
     int hash = hashKey(hashMap, key);
@@ -229,4 +205,15 @@ void* hashMapRemove(HashMap * hashMap, void * key){
         }
         ptr = &(cur->next);
     }
+}
+
+int hashMapForEach(HashMap * hashMap, ExtraFunction extraFunction){
+    if(hashMap == NULL || extraFunction == NULL){
+        return -1;
+    }
+    for (int i = 0; i < hashMap->bucketSize; ++i) {
+        for (Node* cur = hashMap->buckets[i]; cur != NULL; cur = cur->next)
+            extraFunction(cur->key, cur->value);
+    }
+    return 0;
 }

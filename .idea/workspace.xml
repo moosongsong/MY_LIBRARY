@@ -29,10 +29,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="update hash map">
+    <list default="true" id="a7c472cf-d0b9-4fb3-b657-fab8d2741547" name="Default Changelist" comment="total update hash maps">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaxhMap/library_HashMap.c" beforeDir="false" afterPath="$PROJECT_DIR$/HaxhMap/library_HashMap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HaxhMap/library_HashMap.h" beforeDir="false" afterPath="$PROJECT_DIR$/HaxhMap/library_HashMap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaxhMap/library_HashMap.c" beforeDir="false" afterPath="$PROJECT_DIR$/HashMap/library_HashMap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaxhMap/library_HashMap.h" beforeDir="false" afterPath="$PROJECT_DIR$/HashMap/library_HashMap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.c" beforeDir="false" afterPath="$PROJECT_DIR$/user.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +100,8 @@
       <workItem from="1591172347892" duration="3012000" />
       <workItem from="1591181689695" duration="2463000" />
       <workItem from="1591230517213" duration="422000" />
-      <workItem from="1591231049832" duration="11057000" />
+      <workItem from="1591231049832" duration="11907000" />
+      <workItem from="1591249004672" duration="1419000" />
     </task>
     <task id="LOCAL-00001" summary="second git upload">
       <created>1591083432601</created>
@@ -191,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591242521291</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="total update hash maps">
+      <created>1591248112321</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1591248112321</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +225,8 @@
     <MESSAGE value="modify" />
     <MESSAGE value="update circle list" />
     <MESSAGE value="update hash map" />
-    <option name="LAST_COMMIT_MESSAGE" value="update hash map" />
+    <MESSAGE value="total update hash maps" />
+    <option name="LAST_COMMIT_MESSAGE" value="total update hash maps" />
   </component>
   <component name="WindowStateProjectService">
     <state x="347" y="89" key="#MY_LIBRARY" timestamp="1591231152278">
@@ -230,26 +241,26 @@
       <screen x="0" y="40" width="1280" height="680" />
     </state>
     <state x="412" y="78" key="Github.UntrackedFilesDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083312189" />
-    <state width="1237" height="176" key="GridCell.Tab.0.bottom" timestamp="1591247308000">
+    <state width="1237" height="76" key="GridCell.Tab.0.bottom" timestamp="1591249127898">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state width="1237" height="176" key="GridCell.Tab.0.bottom/0.40.1280.680@0.40.1280.680" timestamp="1591247308000" />
-    <state width="1237" height="176" key="GridCell.Tab.0.center" timestamp="1591247307999">
+    <state width="1237" height="76" key="GridCell.Tab.0.bottom/0.40.1280.680@0.40.1280.680" timestamp="1591249127898" />
+    <state width="1237" height="76" key="GridCell.Tab.0.center" timestamp="1591249127898">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state width="1237" height="176" key="GridCell.Tab.0.center/0.40.1280.680@0.40.1280.680" timestamp="1591247307999" />
-    <state width="1237" height="176" key="GridCell.Tab.0.left" timestamp="1591247307999">
+    <state width="1237" height="76" key="GridCell.Tab.0.center/0.40.1280.680@0.40.1280.680" timestamp="1591249127898" />
+    <state width="1237" height="76" key="GridCell.Tab.0.left" timestamp="1591249127898">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state width="1237" height="176" key="GridCell.Tab.0.left/0.40.1280.680@0.40.1280.680" timestamp="1591247307999" />
-    <state width="1237" height="176" key="GridCell.Tab.0.right" timestamp="1591247308000">
+    <state width="1237" height="76" key="GridCell.Tab.0.left/0.40.1280.680@0.40.1280.680" timestamp="1591249127898" />
+    <state width="1237" height="76" key="GridCell.Tab.0.right" timestamp="1591249127898">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state width="1237" height="176" key="GridCell.Tab.0.right/0.40.1280.680@0.40.1280.680" timestamp="1591247308000" />
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591242545449">
+    <state width="1237" height="76" key="GridCell.Tab.0.right/0.40.1280.680@0.40.1280.680" timestamp="1591249127898" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591248179211">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591242545449" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591248179211" />
     <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591235416000">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
