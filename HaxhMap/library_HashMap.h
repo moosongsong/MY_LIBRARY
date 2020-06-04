@@ -11,15 +11,26 @@ typedef char *(*DisplayFunction)(void *);
 
 typedef int(*CompareFunction)(void *, void *);
 
-typedef int(*HashCode)(void * key, int size);
+typedef int(*HashCode)(void *key);
 
-HashMap *initailizeHashMap(FreeFunction freeFunctionForKey, FreeFunction freeFunctionForValue, DisplayFunction displayFunction,
-                           CompareFunction compareFunction, HashCode hashCode, size_t bucketSize);
+static errno_t hashKey(HashMap *hashMap, void *key);
+
+//HashMap *initializeHashMap(FreeFunction freeFunctionForKey, FreeFunction freeFunctionForValue, DisplayFunction displayFunction,
+//                           CompareFunction compareFunction, HashCode hashCode, size_t bucketSize);
+
+HashMap *initializeHashMap(DisplayFunction displayFunction, CompareFunction compareFunction, HashCode hashCode,
+                           size_t bucketSize);
 
 errno_t finalizeHashMap(HashMap *hashMap);
 
-Node * hashMapGet(HashMap * hashMap, char * key);
+static Node *makeNode(void *key, void *value, int hash);
+
+void *hashMapGet(HashMap *hashMap, void *key);
+
 errno_t insertIntoHashMap(HashMap *hashMap, void *key, void *value);
-        void hashMapDisplay(HashMap * hashMap);
-int hashMapRemove(HashMap * hashMap, void * key);
+
+void hashMapDisplay(HashMap *hashMap);
+
+int hashMapRemove(HashMap *hashMap, void *key);
+
 #endif //MY_LIBRARY_LIBRARY_HASHMAP_H

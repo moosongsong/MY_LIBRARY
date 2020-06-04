@@ -99,7 +99,7 @@
       <workItem from="1591172347892" duration="3012000" />
       <workItem from="1591181689695" duration="2463000" />
       <workItem from="1591230517213" duration="422000" />
-      <workItem from="1591231049832" duration="3084000" />
+      <workItem from="1591231049832" duration="9774000" />
     </task>
     <task id="LOCAL-00001" summary="second git upload">
       <created>1591083432601</created>
@@ -178,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591177207747</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update hash map">
+      <created>1591235192504</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1591235192504</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,13 +224,29 @@
       <screen x="0" y="40" width="1280" height="680" />
     </state>
     <state x="412" y="78" key="Github.UntrackedFilesDialog/0.40.1280.680@0.40.1280.680" timestamp="1591083312189" />
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591177212614">
+    <state width="1134" height="176" key="GridCell.Tab.0.bottom" timestamp="1591242128231">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591177212614" />
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591083266964">
+    <state width="1134" height="176" key="GridCell.Tab.0.bottom/0.40.1280.680@0.40.1280.680" timestamp="1591242128231" />
+    <state width="1134" height="176" key="GridCell.Tab.0.center" timestamp="1591242128231">
       <screen x="0" y="40" width="1280" height="680" />
     </state>
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.40.1280.680@0.40.1280.680" timestamp="1591083266964" />
+    <state width="1134" height="176" key="GridCell.Tab.0.center/0.40.1280.680@0.40.1280.680" timestamp="1591242128231" />
+    <state width="1134" height="176" key="GridCell.Tab.0.left" timestamp="1591242128230">
+      <screen x="0" y="40" width="1280" height="680" />
+    </state>
+    <state width="1134" height="176" key="GridCell.Tab.0.left/0.40.1280.680@0.40.1280.680" timestamp="1591242128230" />
+    <state width="1134" height="176" key="GridCell.Tab.0.right" timestamp="1591242128231">
+      <screen x="0" y="40" width="1280" height="680" />
+    </state>
+    <state width="1134" height="176" key="GridCell.Tab.0.right/0.40.1280.680@0.40.1280.680" timestamp="1591242128231" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1591235197043">
+      <screen x="0" y="40" width="1280" height="680" />
+    </state>
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.40.1280.680@0.40.1280.680" timestamp="1591235197043" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1591235416000">
+      <screen x="0" y="40" width="1280" height="680" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.40.1280.680@0.40.1280.680" timestamp="1591235416000" />
   </component>
 </project>

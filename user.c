@@ -9,60 +9,58 @@ typedef struct Person{
     int age;
 }Person;
 
-int hashCodeForString(const char *str, int bucketSize) {
-    if(str == NULL || bucketSize<0){
+int hashCodeForString(void *data) {
+
+    char * str = data;
+    if(str == NULL){
         return -1;
     }
     int hash = 401;
     int c;
 
     while (*str != '\0') {
-        hash = ((hash << 4) + (int) (*str)) % bucketSize;
+        hash = ((hash << 4) + (int) (*str));
         str++;
     }
-    return hash % (bucketSize);
+    return hash;
 }
 
-int equalsForKeyName(void * key1, void * key2){
-
-}
-
-char * toStringForPerson(Person person){
-    char * str = "";
-    strcat(str, person.name);
-    strcat(str,":");
-    strcat(str, person.age);
-    return str;
-}
-
-char * toStringForAddress(Address address){
-    char * str ="";
-    strcat(str, address.roadNum);
-    strcat(str, ":");
-    strcat(str, address.floor);
-    strcat(str, ":");
-    strcat(str, address.roomNum);
-    return str;
-}
-
-int main(){
-    char* names[5] = { "daniel", "susan", "andrew", "monica", "petty" };
-    char* ages[5] = { "10", "20", "30", "40", "50" };
-
-    HashMap * map = initailizeHashMap(NULL, NULL, toStringForAddress, NULL, hashCodeForString, 10);
-    for (int i = 0; i < 5; i++) {
-        char* oldValue;
-        insertIntoHashMap(map, names[i], ages[i]);
+int equalsForVoid(void * key1, void * key2){
+    if(key1 == NULL || key2 == NULL){
+        return -1;
     }
-    hashMapDisplay(map);
+    if(strcmp((const char*)key1, (const char*)key2) == 0){
+        return 0;
+    }
+    return -1;
+}
 
-    // 아래의 hashmapRemove 함수를 구현해 보세요 :D
-    for (int i = 0; i < 5; i++) {
-        const char* value = hashMapRemove(map, names[i]);
-        free((void*)value);
+char * toStringForPerson(void * data){
+    static char buf[1024];
+    Person * person = data;
+    sprintf(buf, "%s(%d)", person->name, person->age);
+    return buf;
+}
+
+int main() {
+    Person people[4] = {
+            {"daniel", 20}, {"susan", 30}, {"petty", 40}, {"eddy", 50}
+    };
+    HashMap* map = initializeHashMap(toStringForPerson, equalsForVoid, hashCodeForString, 10);
+    for (int i = 0; i < 4; i++)
+        insertIntoHashMap(map, people[i].name, &people[i]);
+
+    // 아래의 hashmapGet 함수를 구현해 보세요 :D
+//    for (int i = 0; i < 4; i++) {
+//        Person* p = hashMapGet(map, people[i].name);
+//        if (p)
+//            printf("key: %s, value: %d\n", people[i].name, p->age);
+//    }
+//    hashMapDisplay(map);
+    for (int i = 0; i < 4; i++) {
+        hashMapRemove(map, people[i].name);
         hashMapDisplay(map);
     }
-
     finalizeHashMap(map);
     return 0;
 }
