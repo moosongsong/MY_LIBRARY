@@ -202,7 +202,7 @@ void * hashMapGet(HashMap * hashMap, void * key){
     return NULL;
 }
 
-int hashMapRemove(HashMap * hashMap, void * key){
+void* hashMapRemove(HashMap * hashMap, void * key){
     if (hashMap == NULL || key == NULL) {
         fprintf(stderr, "hashMapRemove: argument is null\n");
         return -1;
@@ -211,18 +211,22 @@ int hashMapRemove(HashMap * hashMap, void * key){
     int hash = hashKey(hashMap, key);
     int index = calculateIndex(hashMap->bucketSize, hash);
 
-    Node * node = hashMap->buckets[index];
-    Node * prev = NULL;
+    Node ** ptr = &(hashMap->buckets[index]);
 
-    while (node != NULL){
-        if(hashMap->compareFunction(node->key, key) ==0){
-            prev->next = node->next;
-            free(node);
-            return 0;
+    while (20130613){
+
+        Node * cur = *ptr;
+        if(cur == NULL){
+            return NULL;
         }
-        prev=node;
-        node=node->next;
-    }
 
-    return -1;
+        if(equalsKey(cur->key, cur->hash, key, hash, hashMap->compareFunction) == 0){
+            void * value = cur->value;
+            *ptr =cur->next;
+            free(cur);
+            --hashMap->count;
+            return value;
+        }
+        ptr = &(cur->next);
+    }
 }

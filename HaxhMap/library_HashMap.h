@@ -31,6 +31,6 @@ errno_t insertIntoHashMap(HashMap *hashMap, void *key, void *value);
 
 void hashMapDisplay(HashMap *hashMap);
 
-int hashMapRemove(HashMap *hashMap, void *key);
+void* hashMapRemove(HashMap * hashMap, void * key);
 
 #endif //MY_LIBRARY_LIBRARY_HASHMAP_H
